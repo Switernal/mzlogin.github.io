@@ -8,7 +8,7 @@ menu: 链接
 permalink: /links/
 ---
 
-> God made relatives. Thank God we can choose our friends.
+> 链接
 
 {% for link in site.data.links %}
   {% if link.src == 'life' %}
@@ -16,7 +16,7 @@ permalink: /links/
   {% endif %}
 {% endfor %}
 
-> 友情链接
+> 特别链接
 
 {% for link in site.data.links %}
   {% if link.src == 'www' %}
