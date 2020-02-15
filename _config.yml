@@ -10,7 +10,7 @@ description: "Sanders的个人博客"
 keywords: Swift, Interconnect, Terminal
 timezone: Asia/Shanghai
 encoding: "utf-8"
-side_bar_repo_limit: 5
+side_bar_repo_limit: 0
 
 # ---------------- #
 #      Author      #
