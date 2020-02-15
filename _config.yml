@@ -36,11 +36,11 @@ navs:
 
   -
     href: /archives/
-    label: 归档
+    label: 时间轴
 
   -
     href: /wiki/
-    label: 维基
+    label: 工具
 
   -
     href: /links/
