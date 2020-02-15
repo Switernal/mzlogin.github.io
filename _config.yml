@@ -5,12 +5,12 @@ baseurl:
 url: https://switernal.cn
 date_format: "ordinal"
 title: Switernal
-subtitle: "Simplicity is the ultimate sophistication"
+subtitle: "Switernal's Personal Blog"
 description: "Sanders的个人博客"
 keywords: Swift, Interconnect, Terminal
 timezone: Asia/Shanghai
 encoding: "utf-8"
-side_bar_repo_limit: 0
+side_bar_repo_limit: 1
 
 # ---------------- #
 #      Author      #
