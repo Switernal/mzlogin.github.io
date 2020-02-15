@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: 善用佳软
+title: 软件偏好
 categories: Recommends
 description: 用正确的工具做对的事情
 keywords: 软件, 推荐
