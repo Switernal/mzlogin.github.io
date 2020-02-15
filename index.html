@@ -34,6 +34,7 @@ comments: false
 <section class="container content">
     <div class="columns">
         <div class="column two-thirds" >
+            {% include sidebar-search.html %}
             <ol class="repo-list">
                 {% for post in paginator.posts %}
                 <li class="repo-list-item">
@@ -61,7 +62,7 @@ comments: false
         <div class="column one-third">
             {% include sidebar-search.html %}
             {% include sidebar-qrcode.html %}
-            {% include sidebar-categories-nav.html %}
+            <!--{% include sidebar-categories-nav.html %}-->
         </div>
     </div>
 </section>
