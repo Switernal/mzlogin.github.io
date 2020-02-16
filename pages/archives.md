@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 归档
+title: 时间轴
 description: 按年份归档
 keywords: 归档
 comments: false
