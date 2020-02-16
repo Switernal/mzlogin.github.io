@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Courses
+layout: courses
+title: 课程
 description: 近期课程
 keywords: 课程，courses
 comments: false
