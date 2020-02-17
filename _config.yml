@@ -87,9 +87,6 @@ collections:
     courses:
         output: true
         permalink: /courses/:path/
-    highmath : # 高等数学
-        output: true
-        permalink: /courses/AdvancedMath/:path/
 
         
 repository: Switernal/switernal.github.io #mzlogin/mzlogin.github.io
