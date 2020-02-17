@@ -86,7 +86,7 @@ collections:
         permalink: /wiki/:path/
     courses:
         output: true
-        permalink: /courses/:path/
+        permalink: /courses/
     highmath : # 高等数学
         output: true
         permalink: /courses/AdvancedMath/:path/
