@@ -17,7 +17,7 @@
             <div class="card-text">
                 <span class="meta-info" title="Last updated：{{ course.date }}">
                     <span class="octicon octicon-clock"></span>
-                 
+                 	<time datetime="{{ course.date }}">{{ course.date | date: '%Y-%m-%d' }}</time>
                 </span>
             </div>
         </div>
