@@ -1,6 +1,6 @@
 <h1>近期课程</h1>
 {% for course in site.courses %}
-{% if course.title != "Wiki Template" %}
+{% if course.categories == "课程" %}
 <a href="{{ site.url }}{{ course.url }}" target="_blank" class="card text-center">
     <div class="thumbnail">
         <div class="card-image geopattern" data-pattern-id="{{ course.title }}">
