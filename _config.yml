@@ -87,7 +87,25 @@ collections:
     courses:
         output: true
         permalink: /courses/:path/
-
+    highmath : # 高等数学
+        output: true
+        permalink: /courses/AdvancedMath/:path/
+    programming : # 面向对象程序设计
+        output: true
+        permalink: /courses/Programming/:path/
+    gailv : # 概率统计
+        output: true
+        permalink: /courses/ProbabilityStatistics/:path/
+    lisan : # 离散数学
+        output: true
+        permalink: /courses/DiscreteMath/:path/
+    physics : # 大学物理
+        output: true
+        permalink: /courses/Physics/:path/ 
+    physicsExp : # 大学物理实验
+        output: true
+        permalink: /courses/PhysicsExperiment/:path/
+        
 repository: Switernal/switernal.github.io #mzlogin/mzlogin.github.io
 
 # ---------------- #
