@@ -90,6 +90,7 @@ collections:
     highmath:
         output: true
         permalink: /AdvancedMath/:path/
+
         
 repository: Switernal/switernal.github.io #mzlogin/mzlogin.github.io
 
