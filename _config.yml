@@ -87,7 +87,6 @@ collections:
     courses:
         output: true
         permalink: /courses/:path/
-
         
 repository: Switernal/switernal.github.io #mzlogin/mzlogin.github.io
 
