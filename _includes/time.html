@@ -41,6 +41,9 @@ $(document).ready(function() {
 	
 	var date=new Date(2020,02,22,00,00,00);
 	var unixTime = parseInt(date.getTime() / 1000);
+	
+	onsole.log(unixTime);
+	console.log($.now());
 
 	$('#countdown18').ClassyCountdown({
 		theme: "flat-colors-black",
