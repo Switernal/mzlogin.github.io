@@ -38,10 +38,14 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
+	
+	var d1=new Date("2020/02/22 00:00:00");
+	var d2= new Date();
+	var d3=(d1-d2)/1000;
 
 	$('#countdown18').ClassyCountdown({
 		theme: "flat-colors-black",
-		end: $.now() + 10000
+		end: d3
 	});
 });
 </script>
