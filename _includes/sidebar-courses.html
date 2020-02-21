@@ -1,14 +1,3 @@
-
-
-<h1>近期课程</h1>
-{% for course in site.courses %}
-{% if course.title != "Course" %}
-<a href="{{ site.url }}{{ course.url }}" target="_blank" class="card text-center">
-    <div class="thumbnail">
-        <div class="card-image geopattern" data-pattern-id="{{ course.title }}">
-            <div class="card-image-cell">
-                <h2>course.title</h2>
-
 <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/posts/default.css">
 
 <script src="{{ site.url }}/assets/js/jquery.min.js"></script>
@@ -32,6 +21,15 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/posts/jquery.classycountdown.css" />
 
 <div id="countdown18" class="ClassyCountdownDemo"></div>
+
+<h1>近期课程</h1>
+{% for course in site.courses %}
+{% if course.title != "Course" %}
+<a href="{{ site.url }}{{ course.url }}" target="_blank" class="card text-center">
+    <div class="thumbnail">
+        <div class="card-image geopattern" data-pattern-id="{{ course.title }}">
+            <div class="card-image-cell">
+                <h2>course.title</h2>
 
 <script type="text/javascript">
 $(document).ready(function() {
