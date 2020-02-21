@@ -80,6 +80,8 @@ gems:
     - jekyll-feed
     - jemoji
 #     - jekyll-mentions
+
+collections_dir: collections
 collections:
     wiki:
         output: true
@@ -87,7 +89,7 @@ collections:
     courses:
         output: true
         permalink: /courses/:path/
-    highmath:
+    Course_AdvancedMath:
         output: true
         permalink: /AdvancedMath/:path/
 
