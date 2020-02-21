@@ -20,10 +20,10 @@
             labels: true,
             labelsOptions: {
                 lang: {
-                    days: 'Days',
-                    hours: 'Hours',
-                    minutes: 'Minutes',
-                    seconds: 'Seconds'
+                    days: '天',
+                    hours: '小时',
+                    minutes: '分钟',
+                    seconds: '秒'
                 },
                 style: 'font-size: 0.5em;'
             },
