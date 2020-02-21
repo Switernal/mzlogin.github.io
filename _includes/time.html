@@ -36,7 +36,7 @@
 <script type="text/javascript">
 $(document).ready(function() {
 	
-	var date=new Date({{page.deadLine}});
+	var date=new Date({{"page.date"}});
 	var unixTime = parseInt((date.valueOf() - $.now()) / 1000);
 
 	alert(date);
