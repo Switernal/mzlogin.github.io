@@ -38,13 +38,10 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-	
-	var date=new Date(2020,02,22,00,00,00);
-	var unixTime = date.getTime();
 
 	$('#countdown18').ClassyCountdown({
 		theme: "flat-colors-black",
-		end: unixTime
+		end: Date(2020,02,22,00,00,00).getTime()
 	});
 });
 </script>
