@@ -36,12 +36,9 @@
 <script type="text/javascript">
 $(document).ready(function() {
 	
-	var date=new Date("2020-02-22");
+	var deadLine = "{{page.deadline}}".substr(0,19);
+	var date=new Date(deadLine);
 	var unixTime = parseInt((date.valueOf() - $.now()) / 1000);
-
-	alert("{{page.deadline}}");
-	alert("{{page.date}}");
-	alert("{{page.categories}}");
 
 	$('#countdown18').ClassyCountdown({
 		theme: "flat-colors-black",
