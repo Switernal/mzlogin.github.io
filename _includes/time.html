@@ -40,14 +40,11 @@
 $(document).ready(function() {
 	
 	var date=new Date("2020-02-22T00:00:00");
-	var unixTime = parseInt(date.valueOf());
-	
-	alert(unixTime);
-	alert($.now());
+	var unixTime = parseInt((date.valueOf() - $.now()) / 1000);
 
 	$('#countdown18').ClassyCountdown({
 		theme: "flat-colors-black",
-		end: unixTime
+		end: $.now() + unixTime
 	});
 });
 </script>
