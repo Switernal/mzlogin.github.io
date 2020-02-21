@@ -39,13 +39,12 @@
 <script type="text/javascript">
 $(document).ready(function() {
 	
-	var d1=new Date("2020/02/22 00:00:00");
-	var d2= new Date();
-	var d3=(d1-d2)/1000;
+	var date=new Date("2020/02/22 00:00:00");
+	var unixTime = date.getTime();
 
 	$('#countdown18').ClassyCountdown({
 		theme: "flat-colors-black",
-		end: d3
+		end: unixTime
 	});
 });
 </script>
