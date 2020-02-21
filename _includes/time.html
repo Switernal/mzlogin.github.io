@@ -39,7 +39,9 @@ $(document).ready(function() {
 	var date=new Date("2020-02-22");
 	var unixTime = parseInt((date.valueOf() - $.now()) / 1000);
 
-	alert("{{page.title}}");
+	alert("{{page.deadLine}}");
+	alert("{{page.date}}");
+	alert("{{page.categories}}");
 
 	$('#countdown18').ClassyCountdown({
 		theme: "flat-colors-black",
