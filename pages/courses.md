@@ -17,7 +17,7 @@ deadline: 2020-02-23 08:00:00
         <h2>{{ course.title }}</h2> 
         </a>
 
-        <p class="{{course.class}}"></p>
+        <p class="{{course.class}}"><h1>Time</h1></p>
   <script>
       function {{course.function}}() {
           countDown();
