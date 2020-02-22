@@ -8,6 +8,7 @@ menu: 课程
 permalink: /courses/
 deadline: 2020-02-23 08:00:00
 ---
+{% include time.html %}
 
 <ul class="listing">
 {% for math in site.courses %}
@@ -19,3 +20,4 @@ deadline: 2020-02-23 08:00:00
     </li>
 {% endfor %}
 </ul>
+
