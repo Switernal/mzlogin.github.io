@@ -19,6 +19,9 @@ deadline: 2020-02-23 08:00:00
 
         <h2><p style="color:red" class="{{course.class}}" ></p></h2>
   <script>
+  
+		document.querySelector(".card-image").style.background = "green";
+		
       function {{course.function}}() {
           countDown();
 
