@@ -1,17 +1,19 @@
 <h1>近期课程</h1>
+{% assign id = 0 %}
+
 {% for course in site.courses %}
+
+{% assign id = id | plus: 1 %}
+
 {% if course.title != "Course" %}
 <a href="{{ site.url }}{{ course.url }}" target="_blank" class="card text-center">
     <div class="thumbnail">
-        <div class="card-image">
+        <div class="card-image" id="{{id}}">
             <div class="card-image-cell">
                 <h3 class="card-title">
                     {{ course.title }}
                 </h3>
 
-		<script>
-		document.querySelector(".card-image").style.background = "green";
-		</script>
 	        </div>
 	    </div>
 	    <div class="caption">

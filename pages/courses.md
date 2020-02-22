@@ -11,7 +11,12 @@ deadline: 2020-02-23 08:00:00
 
 
 <ul class="listing">
+{% assign id = 0 %}
+
 {% for course in site.courses %}
+
+{% assign id = id | plus: 1 %}
+
     <li class="listing-item">
     	<a href="{{ site.url }}{{ math.url }}">
         <h2>{{ course.title }}</h2> 
@@ -20,7 +25,7 @@ deadline: 2020-02-23 08:00:00
         <h2><p style="color:red" class="{{course.class}}" ></p></h2>
   <script>
   
-		document.querySelector(".card-image").style.background = "green";
+		document.getElementById("{{id}}").style.background = "green";
 		
       function {{course.function}}() {
           countDown();
