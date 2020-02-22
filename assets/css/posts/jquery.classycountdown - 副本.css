@@ -18,7 +18,7 @@
 .ClassyCountdown-wrapper .ClassyCountdown-value {
     width: 100%;
     line-height: 1em;
-    position: relative;
+    position: absolute;
     top: 50%;
     text-align: center;
     left: 0;
