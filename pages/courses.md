@@ -19,6 +19,9 @@ deadline: 2020-02-23 08:00:00
 
         <p class="{{course.class}}"></p>
   <script>
+  window.onload=function(){
+  	{{course.function}}();
+  }
       function {{course.function}}() {
           countDown();
 
@@ -49,14 +52,7 @@ deadline: 2020-02-23 08:00:00
     </li>
 {% endfor %}
 
-<script>    
-      window.onload=function(){
-  		{% for course in site.courses %}
-  		  	{{course.function}}();
-		{% endfor %}
-​     	 } 
 
-</script>
 </ul>
 
 
@@ -65,7 +61,14 @@ deadline: 2020-02-23 08:00:00
 
 
 
+<script>    
+      window.onload=function(){
+  		{% for course in site.courses %}
+  		  	{{course.function}}();
+		{% endfor %}
+​     	 } 
 
+</script>
 
 
 
