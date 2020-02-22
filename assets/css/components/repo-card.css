@@ -6,6 +6,7 @@
 }
 
 .card-image {
+    backgound: red;
     display: table;
     height: 120px;
     width: 100%;
