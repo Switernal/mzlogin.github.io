@@ -19,8 +19,9 @@ deadline: 2020-02-23 08:00:00
 
         <p class="{{course.class}}"></p>
   <script>
-      function {{course.function}} () {
+      function {{course.function}}() {
           countDown();
+
           function addZero(i) {
               return i < 10 ? "0" + i: i + "";
           }
