@@ -8,6 +8,12 @@ menu: 课程
 permalink: /courses/
 deadline: 2020-02-23 08:00:00
 ---
+
+<h1>{{page.title}}</h1>
+{% include time.html %}
+<h1>{{page.date}}</h1>
+{% include time.html %}
+<h1>{{page.keywords}}</h1>
 {% include time.html %}
 
 <ul class="listing">
