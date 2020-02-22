@@ -17,9 +17,9 @@ deadline: 2020-02-23 08:00:00
         <h2>{{ course.title }}</h2> 
         </a>
 
-        <p class="{{course.title}}"></p>
+        <p class="{{course.class}}"></p>
   <script>
-      function {{course.title}} () {
+      function {{course.function}} () {
           countDown();
           function addZero(i) {
               return i < 10 ? "0" + i: i + "";
@@ -36,9 +36,9 @@ deadline: 2020-02-23 08:00:00
               h = addZero(h);
               m = addZero(m);
               s = addZero(s);
-              document.querySelector(".{{course.title}}").innerHTML = `活动倒计时  ${d}天 ${h} 时${m} 分 ${s} 秒`;
+              document.querySelector(".{{course.class}}").innerHTML = `活动倒计时  ${d}天 ${h} 时${m} 分 ${s} 秒`;
               if (lefttime <= 0) {
-                  document.querySelector(".{{course.title}}").innerHTML = "活动已结束";
+                  document.querySelector(".{{course.class}}").innerHTML = "活动已结束";
                   return;
               }
               setTimeout(countDown, 1000);
@@ -54,7 +54,7 @@ deadline: 2020-02-23 08:00:00
 <script>    
       window.onload=function(){
   		{% for course in site.courses %}
-  		  	{{course.title}}();
+  		  	{{course.function}}();
 		{% endfor %}
 ​     	 } 
 
