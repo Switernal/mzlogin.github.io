@@ -11,10 +11,10 @@ deadline: 2020-02-23 08:00:00
 
 
 <ul class="listing">
-{% for math in site.courses %}
+{% for course in site.courses %}
     <li class="listing-item">
     	<a href="{{ site.url }}{{ math.url }}">
-        <h2>{{ math.title }}</h2> 
+        <h2>{{ course.title }}</h2> 
         </a>
 
         <p class="{{course.title}}"></p>
@@ -53,7 +53,7 @@ deadline: 2020-02-23 08:00:00
 
 <script>    
       window.onload=function(){
-  		{% for math in site.courses %}
+  		{% for course in site.courses %}
   		  	{{course.title}}();
 		{% endfor %}
 ​     	 } 
