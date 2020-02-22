@@ -41,7 +41,7 @@ deadline: 2020-02-23 08:00:00
     </script>
 
 <h1>Test2</h1>
-<p class="count"></p>
+<p class="count1"></p>
   <script>
       window.onload = function () {
           countDown();
@@ -60,9 +60,9 @@ deadline: 2020-02-23 08:00:00
               h = addZero(h);
               m = addZero(m);
               s = addZero(s);
-              document.querySelector(".count").innerHTML = `活动倒计时  ${d}天 ${h} 时${m} 分 ${s} 秒`;
+              document.querySelector(".count1").innerHTML = `活动倒计时  ${d}天 ${h} 时${m} 分 ${s} 秒`;
               if (lefttime <= 0) {
-                  document.querySelector(".count").innerHTML = "活动已结束";
+                  document.querySelector(".count1").innerHTML = "活动已结束";
                   return;
               }
               setTimeout(countDown, 1000);
