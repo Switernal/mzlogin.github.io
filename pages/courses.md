@@ -9,11 +9,12 @@ permalink: /courses/
 deadline: 2020-02-23 08:00:00
 ---
 
-<h1>Test1</h1>
 
+
+<h1>Test1</h1>
 <p class="count"></p>
   <script>
-      function1 () {
+      function Timer1 () {
           countDown();
           function addZero(i) {
               return i < 10 ? "0" + i: i + "";
@@ -41,9 +42,9 @@ deadline: 2020-02-23 08:00:00
     </script>
 
 <h1>Test2</h1>
-<p class="count1"></p>
+<p class="count"></p>
   <script>
-      function2 () {
+      function Timer2 () {
           countDown();
           function addZero(i) {
               return i < 10 ? "0" + i: i + "";
@@ -60,18 +61,22 @@ deadline: 2020-02-23 08:00:00
               h = addZero(h);
               m = addZero(m);
               s = addZero(s);
-              document.querySelector(".count1").innerHTML = `活动倒计时  ${d}天 ${h} 时${m} 分 ${s} 秒`;
+              document.querySelector(".count").innerHTML = `活动倒计时  ${d}天 ${h} 时${m} 分 ${s} 秒`;
               if (lefttime <= 0) {
-                  document.querySelector(".count1").innerHTML = "活动已结束";
+                  document.querySelector(".count").innerHTML = "活动已结束";
                   return;
               }
               setTimeout(countDown, 1000);
             }
-        }
-      
+        }  
+
+
       window.onload=function(){
-          function1();
-          function2();
-      } 
-      
-    </script>
+      Timer1();
+      Timer2();
+  } 
+
+</script>
+
+
+
