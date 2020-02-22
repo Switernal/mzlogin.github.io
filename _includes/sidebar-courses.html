@@ -8,20 +8,24 @@
                 <h3 class="card-title">
                     {{ course.title }}
                 </h3>
-            </div>
-        </div>
-        <div class="caption">
-            <div class="card-description">
-                <p class="card-text">{{ course.description }}</p>
-            </div>
-            <div class="card-text">
-                <span class="meta-info" title="Last updated：{{ course.date }}">
-                    <span class="octicon octicon-clock"></span>
-                 	<time datetime="{{ course.date }}">{{ course.date | date: '%Y-%m-%d' }}</time>
-                </span>
-            </div>
-        </div>
-    </div>
+
+		<script>
+		document.querySelector(".card-image").style.background = green;
+		</script>
+	        </div>
+	    </div>
+	    <div class="caption">
+	        <div class="card-description">
+	            <p class="card-text">{{ course.description }}</p>
+	        </div>
+	        <div class="card-text">
+	            <span class="meta-info" title="Last updated：{{ course.date }}">
+	                <span class="octicon octicon-clock"></span>
+	             	<time datetime="{{ course.date }}">{{ course.date | date: '%Y-%m-%d' }}</time>
+	            </span>
+	        </div>
+	    </div>
+	</div>
 </a>
 {% endif %}
 {% endfor %}
