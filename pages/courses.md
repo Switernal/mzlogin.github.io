@@ -18,7 +18,7 @@ deadline: 2020-02-23 08:00:00
           }
           function countDown() {
               var nowtime = new Date();
-              var endtime = new Date("2019/03/16,17:57:00");
+              var endtime = new Date("2020/02/28,17:57:00");
               var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
               var d = parseInt(lefttime / (24*60*60))
               var h = parseInt(lefttime / (60 * 60) % 24);
