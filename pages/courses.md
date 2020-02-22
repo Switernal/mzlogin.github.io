@@ -6,7 +6,7 @@ keywords: 课程，courses
 comments: false
 menu: 课程
 permalink: /courses/
-deadline: 2020-02-22 08:00:00
+deadline: 2020-02-23 08:00:00
 ---
 
 <ul class="listing">
@@ -14,11 +14,8 @@ deadline: 2020-02-22 08:00:00
     <li class="listing-item">
         <a href="{{ site.url }}{{ math.url }}">
         	<h2>{{ math.title }}</h2> 
-        </a>
-
-    	
+        </a>	
     </li>
 {% endfor %}
 </ul>
-
 {% include time.html %}
