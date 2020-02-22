@@ -16,7 +16,9 @@ deadline: 2020-02-22 08:00:00
         	<h2>{{ math.title }}</h2> 
         </a>
 
-    	{% include time.html %}
+    	
     </li>
 {% endfor %}
 </ul>
+
+{% include time.html %}
