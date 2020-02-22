@@ -48,9 +48,6 @@ deadline: 2020-02-23 08:00:00
     </script>
     </li>
 {% endfor %}
-</ul>
-
-
 
 <script>    
       window.onload=function(){
@@ -60,6 +57,11 @@ deadline: 2020-02-23 08:00:00
 ​     	 } 
 
 </script>
+</ul>
+
+
+
+
 
 
 
