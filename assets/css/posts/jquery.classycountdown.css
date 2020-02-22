@@ -9,7 +9,7 @@
  */
 
 .ClassyCountdown-wrapper > div {
-    display: block;
+    display: inline-block;
     position: relative;
     width: calc(25% - 20px);
     margin: 10px;
