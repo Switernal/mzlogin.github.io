@@ -9,21 +9,32 @@ permalink: /courses/
 deadline: 2020-02-23 08:00:00
 ---
 
-<h1>{{page.title}}</h1>
-{% include time.html %}
-<h1>{{page.menu}}</h1>
-{% include time.html %}
-<h1>{{page.keywords}}</h1>
-{% include time.html %}
-
-<ul class="listing">
-{% for math in site.courses %}
-    <li class="listing-item">
-        <a href="{{ site.url }}{{ math.url }}">
-        	<h2>{{ math.title }}</h2> 
-        	<div id="countdown18" class="ClassyCountdownDemo"></div>
-        </a>	
-    </li>
-{% endfor %}
-</ul>
+<p class="count"></p>
+  <script>
+      window.onload = function () {
+          countDown();
+          function addZero(i) {
+              return i < 10 ? "0" + i: i + "";
+          }
+          function countDown() {
+              var nowtime = new Date();
+              var endtime = new Date("2019/03/16,17:57:00");
+              var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
+              var d = parseInt(lefttime / (24*60*60))
+              var h = parseInt(lefttime / (60 * 60) % 24);
+              var m = parseInt(lefttime / 60 % 60);
+              var s = parseInt(lefttime % 60);
+              d = addZero(d)
+              h = addZero(h);
+              m = addZero(m);
+              s = addZero(s);
+              document.querySelector(".count").innerHTML = `活动倒计时  ${d}天 ${h} 时${m} 分 ${s} 秒`;
+              if (lefttime <= 0) {
+                  document.querySelector(".count").innerHTML = "活动已结束";
+                  return;
+              }
+              setTimeout(countDown, 1000);
+            }
+        }
+    </script>
 
