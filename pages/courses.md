@@ -13,7 +13,7 @@ deadline: 2020-02-23 08:00:00
 
 <p class="count"></p>
   <script>
-      window.onload = function () {
+      function1 () {
           countDown();
           function addZero(i) {
               return i < 10 ? "0" + i: i + "";
@@ -43,7 +43,7 @@ deadline: 2020-02-23 08:00:00
 <h1>Test2</h1>
 <p class="count1"></p>
   <script>
-      window.onload = function () {
+      function2 () {
           countDown();
           function addZero(i) {
               return i < 10 ? "0" + i: i + "";
@@ -68,4 +68,10 @@ deadline: 2020-02-23 08:00:00
               setTimeout(countDown, 1000);
             }
         }
+      
+      window.onload=function(){
+          function1();
+          function2();
+      } 
+      
     </script>
