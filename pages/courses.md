@@ -10,11 +10,16 @@ deadline: 2020-02-23 08:00:00
 ---
 
 
+<ul class="listing">
+{% for math in site.courses %}
+    <li class="listing-item">
+    	<a href="{{ site.url }}{{ math.url }}">
+        <h2>{{ math.title }}</h2> 
+        </a>
 
-<h1>Test1</h1>
-<p class="count"></p>
+        <p class="{{course.title}}"></p>
   <script>
-      function Timer1 () {
+      function {{course.title}} () {
           countDown();
           function addZero(i) {
               return i < 10 ? "0" + i: i + "";
@@ -40,40 +45,18 @@ deadline: 2020-02-23 08:00:00
             }
         }
     </script>
+    </li>
+{% endfor %}
+</ul>
 
-<h1>Test2</h1>
-<p class="count1"></p>
-  <script>
-      function Timer2 () {
-          countDown();
-          function addZero(i) {
-              return i < 10 ? "0" + i: i + "";
-          }
-          function countDown() {
-              var nowtime = new Date();
-              var endtime = new Date("2020/02/24,17:57:00");
-              var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
-              var d = parseInt(lefttime / (24*60*60))
-              var h = parseInt(lefttime / (60 * 60) % 24);
-              var m = parseInt(lefttime / 60 % 60);
-              var s = parseInt(lefttime % 60);
-              d = addZero(d)
-              h = addZero(h);
-              m = addZero(m);
-              s = addZero(s);
-              document.querySelector(".count1").innerHTML = `活动倒计时  ${d}天 ${h} 时${m} 分 ${s} 秒`;
-              if (lefttime <= 0) {
-                  document.querySelector(".count1").innerHTML = "活动已结束";
-                  return;
-              }
-              setTimeout(countDown, 1000);
-            }
-        }  
-      
+
+
+<script>    
       window.onload=function(){
-  		Timer1();
-  		Timer2();  
-      } 
+  		{% for math in site.courses %}
+  		  	{{course.title}}();
+		{% endfor %}
+​     	 } 
 
 </script>
 
