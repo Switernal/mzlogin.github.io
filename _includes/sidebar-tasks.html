@@ -81,13 +81,17 @@
               	document.getElementById("{{id}}").style.background = "#dc3545";
               }
               
-              if (d >= 1 && d < 2) {
+              if (d > 0 && d <= 2) {
               	document.getElementById("{{id}}").style.background = "#fd7e14";
               }
               
-              if (d >=2) {
-              	document.getElementById("{{id}}").style.background = "#28a745";
+              if (d > 2 && d <= 3) {
+              	document.getElementById("{{id}}").style.background = "#ffc107";
               }             
+
+	 if (d > 3) {
+		document.getElementById("{{id}}").style.background = "#28a745";
+	 }
 
               document.querySelector(".{{task.class}}").innerHTML = `任务截止还有  ${d} 天 ${h} 小时 ${m} 分 ${s} 秒`;
               if (lefttime <= 0) {
