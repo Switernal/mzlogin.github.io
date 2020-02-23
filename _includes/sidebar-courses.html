@@ -36,8 +36,10 @@
               return i < 10 ? "0" + i: i + "";
           }
           function countDown() {
+         
+              var deadLine = "{{course.date}}".substr(0,19);
               var nowtime = new Date();
-              var endtime = new Date("2020/02/28,17:57:00");
+              var endtime = new Date(deadLine");
               var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
               var d = parseInt(lefttime / (24*60*60))
               var h = parseInt(lefttime / (60 * 60) % 24);
