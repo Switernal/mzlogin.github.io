@@ -26,8 +26,6 @@
 	            <span class="meta-info" title="Last updated：{{ course.date }}">
 <h3 style="margin-top: 0px; margin-bottom: 0px"><p  class="{{course.class}}" style="margin-block-start: 0px; margin-block-end: 0px" ></p></h3>
   <script>
-  
-	document.getElementById("{{id}}").style.background = "green";
 		
       function {{course.function}}() {
           countDown();
@@ -40,6 +38,8 @@
               var deadLine = "{{course.date}}".substr(0,19);
               var nowtime = new Date();
               var endtime = new Date(deadLine);
+              alert(nowtime);
+              alert(endtime);
               var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
               var d = parseInt(lefttime / (24*60*60))
               var h = parseInt(lefttime / (60 * 60) % 24);
@@ -49,9 +49,23 @@
               h = addZero(h);
               m = addZero(m);
               s = addZero(s);
-              document.querySelector(".{{course.class}}").innerHTML = `作业倒计时  ${d} 天 ${h} 时 ${m} 分 ${s} 秒`;
+              
+              if (d == 0) {
+              	document.getElementById("{{id}}").style.background = "#dc3545";
+              }
+              
+              if (d >= 1 && d < 2) {
+              	document.getElementById("{{id}}").style.background = "#ffc107";
+              }
+              
+              if (d >=2) {
+              	document.getElementById("{{id}}").style.background = "#28a745";
+              }
+              
+              document.querySelector(".{{course.class}}").innerHTML = `任务倒计时  ${d} 天 ${h} 小时 ${m} 分 ${s} 秒`;
               if (lefttime <= 0) {
-                  document.querySelector(".{{course.class}}").innerHTML = "作业已截止！";
+              	  document.getElementById("{{id}}").style.background = "#6c757d";
+                  document.querySelector(".{{course.class}}").innerHTML = "任务已截止！";
                   return;
               }
               setTimeout(countDown, 1000);
