@@ -24,7 +24,7 @@
 	        </div>
 	        <div class="card-text">
 	            <span class="meta-info" title="Last updated：{{ course.date }}">
-	                    <p  class="{{course.class}}" ></p>
+<p  class="{{course.class}}" style="margin-block-start=0px; margin-block-end=0px" ></p>
   <script>
   
 	document.getElementById("{{id}}").style.background = "green";
@@ -47,9 +47,9 @@
               h = addZero(h);
               m = addZero(m);
               s = addZero(s);
-              document.querySelector(".{{course.class}}").innerHTML = `活动倒计时  ${d}天 ${h} 时${m} 分 ${s} 秒`;
+              document.querySelector(".{{course.class}}").innerHTML = `作业倒计时  ${d}天 ${h} 时${m} 分 ${s} 秒`;
               if (lefttime <= 0) {
-                  document.querySelector(".{{course.class}}").innerHTML = "活动已结束";
+                  document.querySelector(".{{course.class}}").innerHTML = "作业已截止！";
                   return;
               }
               setTimeout(countDown, 1000);
