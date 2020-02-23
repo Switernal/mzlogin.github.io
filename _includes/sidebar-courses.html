@@ -47,7 +47,7 @@
               h = addZero(h);
               m = addZero(m);
               s = addZero(s);
-              document.querySelector(".{{course.class}}").innerHTML = `作业倒计时  ${d}天 ${h} 时${m} 分 ${s} 秒`;
+              document.querySelector(".{{course.class}}").innerHTML = `作业倒计时  ${d} 天 ${h} 时 ${m} 分 ${s} 秒`;
               if (lefttime <= 0) {
                   document.querySelector(".{{course.class}}").innerHTML = "作业已截止！";
                   return;
