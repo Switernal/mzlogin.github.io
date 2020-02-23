@@ -12,13 +12,21 @@ layout: default
   </div>
 </div>
 </section>
+
 <!-- / .banner -->
+
 <section class="container content">
 <div class="columns">
+
   <div class="column three-fourths" >
     {% include sidebar-tasks.html %}
-
   </div>
+
+  <div class="comment">
+      {% include comments.html %}
+  </div>
+
+
   <div class="column one-fourth">
 	{{ content }}
     <!-- {% include sidebar-search.html %} -->
