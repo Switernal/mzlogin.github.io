@@ -26,12 +26,15 @@
 
 	        <style>
 		.platform:before {
-			content:"💻";
+			content:"🖥";
 		}
 		
 		.course:before {
-			content:"📋";
+			content:"📚";
 		}
+
+		.date:before {
+			content:"🕒";
 	        </style>
 
 		<span class="meta-info" title="平台：{{ task.platform }}">
@@ -42,9 +45,11 @@
                     		<span class="octicon course"></span> {{ task.course }}
                 	</span>
 
+		<br>
+
 		<span class="meta-info" title="截止日期：{{ task.date }}">
-                    		<span class="octicon octicon-clock"></span>
-                    		<time datetime="{{ task.date }}">{{ task.date | date: '%Y-%m-%d %H:%M}}</time>
+                    		<span class="octicon date"></span>
+                    		<time datetime="{{ task.date }}">{{ task.date | date: '%Y-%m-%d %H:%M'}}</time>
                 	</span>
 
 	            <span class="meta-info" title="截止日期：{{ task.date }}">
