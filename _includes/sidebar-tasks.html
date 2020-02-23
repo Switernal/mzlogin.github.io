@@ -57,7 +57,7 @@
               	document.getElementById("{{id}}").style.background = "#28a745";
               }             
 
-              document.querySelector(".{{task.class}}").innerHTML = lefttime;
+              document.querySelector(".{{task.class}}").innerHTML = nowtime + "oh" + endtime + "oh" + deadLine;
               if (lefttime <= 0) {
               	  document.getElementById("{{id}}").style.background = "#6c757d";
                   document.querySelector(".{{task.class}}").innerHTML = "任务已截止！";
