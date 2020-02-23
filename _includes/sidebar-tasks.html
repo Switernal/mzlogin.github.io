@@ -6,7 +6,7 @@
 {% assign id = id | plus: 1 %}
 
 {% if task.title != "Course" %}
-<a class="card text-center">
+<a href="{{ course.link }}" target="_blank" class="card text-center">
     <div class="thumbnail">
         <div class="card-image" id="{{id}}">
             <div class="card-image-cell">
