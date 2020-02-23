@@ -1,17 +1,17 @@
 <h1>近期作业</h1>
 {% assign id = 0 %}
 
-{% for course in site.courses %}
+{% for task in site.tasks %}
 
 {% assign id = id | plus: 1 %}
 
-{% if course.title != "Course" %}
-<a href="{{ site.url }}{{ course.url }}" target="_blank" class="card text-center">
+{% if task.title != "Course" %}
+<a href="{{ site.url }}{{ task.url }}" target="_blank" class="card text-center">
     <div class="thumbnail">
         <div class="card-image" id="{{id}}">
             <div class="card-image-cell">
                 <h3 class="card-title">
-                    {{ course.title }}
+                    {{ task.title }}
                 </h3>
             <script>
 				document.getElementById("{{id}}").style.background = "green";
@@ -20,14 +20,14 @@
 	    </div>
 	    <div class="caption" style="padding-bottom: 0px;">
 	        <div class="card-description" >
-	            <p class="card-text" style="margin-block-start: 0em;margin-block-end: 0em">{{ course.description }}</p>
+	            <p class="card-text" style="margin-block-start: 0em;margin-block-end: 0em">{{ task.description }}</p>
 	        </div>
 	        <div class="card-text">
-	            <span class="meta-info" title="Last updated：{{ course.date }}">
-<h3 style="margin-top: 0px; margin-bottom: 0px"><p  class="{{course.class}}" style="margin-block-start: 0px; margin-block-end: 0px" ></p></h3>
+	            <span class="meta-info" title="Last updated：{{ task.date }}">
+<h3 style="margin-top: 0px; margin-bottom: 0px"><p  class="{{task.class}}" style="margin-block-start: 0px; margin-block-end: 0px" ></p></h3>
   <script>
 		
-      function {{course.function}}() {
+      function {{task.function}}() {
           countDown();
 
           function addZero(i) {
@@ -35,7 +35,7 @@
           }
           function countDown() {
          
-              var deadLine = "{{course.date}}".substr(0,19);
+              var deadLine = "{{task.date}}".substr(0,19);
               var nowtime = new Date();
               var endtime = new Date(deadLine);
               var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
@@ -60,10 +60,10 @@
               	document.getElementById("{{id}}").style.background = "#28a745";
               }
               
-              document.querySelector(".{{course.class}}").innerHTML = `任务倒计时  ${d} 天 ${h} 小时 ${m} 分 ${s} 秒`;
+              document.querySelector(".{{task.class}}").innerHTML = `任务倒计时  ${d} 天 ${h} 小时 ${m} 分 ${s} 秒`;
               if (lefttime <= 0) {
               	  document.getElementById("{{id}}").style.background = "#6c757d";
-                  document.querySelector(".{{course.class}}").innerHTML = "任务已截止！";
+                  document.querySelector(".{{task.class}}").innerHTML = "任务已截止！";
                   return;
               }
               setTimeout(countDown, 1000);
@@ -80,8 +80,8 @@
 
 <script>    
       window.onload=function(){
-  		{% for course in site.courses %}
-  		  	{{course.function}}();
+  		{% for task in site.tasks %}
+  		  	{{task.function}}();
 		{% endfor %}
       } 
 
