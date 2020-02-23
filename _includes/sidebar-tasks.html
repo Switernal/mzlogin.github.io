@@ -24,12 +24,27 @@
 
 	        <div class="card-text">
 
+	        <style>
+		.platform:before {
+			content:"💻";
+		}
+		
+		.course:before {
+			content:"📋";
+		}
+	        </style>
+
 		<span class="meta-info" title="平台：{{ task.platform }}">
-                    		<span class="octicon octicon-git-branch"></span> {{ task.platform }}
+                    		<span class="octicon platform"></span> {{ task.platform }}
                	</span>
 
                 	<span class="meta-info" title="课程：{{ task.course }}">
-                    		<span class="octicon octicon-git-branch"></span> {{ task.course }}
+                    		<span class="octicon course"></span> {{ task.course }}
+                	</span>
+
+		<span class="meta-info" title="截止日期：{{ task.date }}">
+                    		<span class="octicon octicon-clock"></span>
+                    		<time datetime="{{ task.date }}">{{ task.date | date: '%Y-%m-%d' }}</time>
                 	</span>
 
 	            <span class="meta-info" title="截止日期：{{ task.date }}">
