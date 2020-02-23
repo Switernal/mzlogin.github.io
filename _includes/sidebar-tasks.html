@@ -43,10 +43,7 @@
               var h = parseInt(lefttime / (60 * 60) % 24);
               var m = parseInt(lefttime / 60 % 60);
               var s = parseInt(lefttime % 60);
-              d = addZero(d)
-              h = addZero(h);
-              m = addZero(m);
-              s = addZero(s);
+
               
               if (d == 0) {
               	document.getElementById("{{id}}").style.background = "#dc3545";
