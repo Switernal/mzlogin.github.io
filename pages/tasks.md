@@ -4,7 +4,7 @@ title: 任务
 description: 主要为近期作业
 date: 2020-02-23 16:05:24 +0800
 keywords: 任务, tasks
-comments: true
+comments: false
 menu: 任务
 permalink: /tasks/
 deadline: 2020-02-23 08:00:00
@@ -32,4 +32,10 @@ deadline: 2020-02-23 08:00:00
 
 
 
-### 如有作业未列出可以在下方评论或在QQ中告知。
+### 如有作业未列出可以在页面底部评论或在QQ中告知。
+
+
+
+  <div class="comment">
+      {% include comments.html %}
+  </div>
