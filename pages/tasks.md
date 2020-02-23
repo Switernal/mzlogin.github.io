@@ -14,13 +14,15 @@ deadline: 2020-02-23 08:00:00
 
 ------
 
-
-
-#### 红色：截止时间 < 24小时
+#### 深红色：截止时间 ≤ 2小时
 
 
 
-#### 黄色：24小时 < 截止时间 < 48小时
+#### 红色：2小时 < 截止时间 ≤ 24小时
+
+
+
+#### 黄色：24小时 < 截止时间 ≤ 48小时
 
 
 
@@ -32,13 +34,14 @@ deadline: 2020-02-23 08:00:00
 
 
 
-### 如有作业未列出可以在下方评论或在QQ中告知。
+### 如有作业未列出可在下方评论或在QQ中告知。
 
 
 
 <span id="busuanzi_container_page_pv">
 
-<h5 style="font-weight: normal; color: DimGray"><i>页面已经被偷看了 <span id="busuanzi_value_page_pv"></span> 次</i>
+<h5 style="font-weight: normal; color: DimGray"><i>这个页面已经被偷看了 <span id="busuanzi_value_page_pv"></span> 次</i>
+
 
 
   <div class="comment">
