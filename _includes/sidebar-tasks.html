@@ -6,7 +6,7 @@
 {% assign id = id | plus: 1 %}
 
 {% if task.title != "Course" %}
-<a href="{{ site.url }}{{ task.url }}" target="_blank" class="card text-center">
+<!-- <a href="{{ site.url }}{{ task.url }}" target="_blank" class="card text-center"> -->
     <div class="thumbnail">
         <div class="card-image" id="{{id}}">
             <div class="card-image-cell">
@@ -23,7 +23,7 @@
 	            <p class="card-text" style="margin-block-start: 0em;margin-block-end: 0em">{{ task.description }}</p>
 	        </div>
 	        <div class="card-text">
-	            <span class="meta-info" title="Last updated：{{ task.date }}">
+	            <span class="meta-info" title="截止日期：{{ task.date }}">
 <h3 style="margin-top: 0px; margin-bottom: 0px"><p  class="{{task.class}}" style="margin-block-start: 0px; margin-block-end: 0px" ></p></h3>
   <script>
 		
@@ -37,7 +37,7 @@
          
               var deadLine = "{{task.date}}".substr(0,19);
               var nowtime = new Date();
-              var endtime = new Date(deadLine);
+              var endtime = new Date(deadLine.replace(/-/g, "/"));
               var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
               var d = parseInt(lefttime / (24*60*60))
               var h = parseInt(lefttime / (60 * 60) % 24);
@@ -57,7 +57,7 @@
               	document.getElementById("{{id}}").style.background = "#28a745";
               }             
 
-              document.querySelector(".{{task.class}}").innerHTML = nowtime + "oh" + endtime + "oh" + deadLine;
+              document.querySelector(".{{task.class}}").innerHTML = `任务截止还有  ${d} 天 ${h} 小时 ${m} 分 ${s} 秒`;
               if (lefttime <= 0) {
               	  document.getElementById("{{id}}").style.background = "#6c757d";
                   document.querySelector(".{{task.class}}").innerHTML = "任务已截止！";
