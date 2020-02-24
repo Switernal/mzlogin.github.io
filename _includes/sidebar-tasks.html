@@ -73,11 +73,11 @@
               var m = parseInt(lefttime / 60 % 60);
               var s = parseInt(lefttime % 60);
 
-              if (d == 0 && h <= 3) {
+              if (d == 0 && h < 3) {
               	document.getElementById("{{id}}").style.background = "DarkRed";
               }
 
-              if (d == 0 && h > 3) {
+              if (d == 0 && h >= 3) {
               	document.getElementById("{{id}}").style.background = "#dc3545";
               }
               
