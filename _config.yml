@@ -38,9 +38,9 @@ navs:
     href: /categories/
     label: 博客
 
-  -
-    href: /archives/
-    label: 时间轴
+  #-
+  #  href: /archives/
+  #  label: 时间轴
 
   #-
   #  href: /wiki/
