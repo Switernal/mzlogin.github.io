@@ -1,0 +1,80 @@
+<h1>近期作业</h1>
+{% assign id = 0 %}
+
+{% for task in site.tasks %}
+
+{% assign id = id | plus: 1 %}
+
+{% if task.status == "归档" %}
+<a class="card text-center">
+    <div class="thumbnail">
+        <div class="card-image" id="{{id}}">
+            <div class="card-image-cell">
+                <h3 class="card-title">
+                    {{ task.title }}
+                </h3>
+	        </div>
+	    </div>
+	    <div class="caption" style="padding-bottom: 0px;">
+	        <div class="card-description" >
+		<h3 style="font-weight: normal">
+	            <p class="card-text" style="margin-block-start: 0em;margin-block-end: 0em">{{ task.description }}</p>
+		</h3>
+	        </div>
+
+	        <div class="card-text">
+
+	        <style>
+		.platform:before {
+			content:"💻";
+		}
+		
+		.course:before {
+			content:"📚";
+		}
+
+		.date:before {
+			content:"🕒";
+	        </style>
+
+		<span class="meta-info" title="平台：{{ task.platform }}">
+                    		<span class="octicon platform"></span> {{ task.platform }}
+               	</span>
+
+                	<span class="meta-info" title="课程：{{ task.course }}">
+                    		<span class="octicon course"></span> {{ task.course }}
+                	</span>
+
+		<h5></h5>
+
+		<span class="meta-info" title="截止日期：{{ task.date }}">
+                    		<span class="octicon date"></span>
+                    		<time datetime="{{ task.date }}">{{ task.date | date: '%Y-%m-%d %H:%M'}}</time>
+                	</span>
+
+	            <span class="meta-info" title="截止日期：{{ task.date }}">
+<h3 style="margin-bottom: 0px"><p  class="{{task.class}}" style="margin-block-start: 0px; margin-block-end: 0px" ></p></h3>
+  <script>
+		
+      function {{task.function}}() {
+ 	document.querySelector(".{{task.class}}").innerHTML = "任务已截止！";
+      }
+    </script>    
+	            </span>
+	        </div>
+	    </div>
+	</div>
+</a>
+{% endif %}
+{% endfor %}
+
+<script>    
+      window.onload=function(){
+  		{% for task in site.tasks %}
+			{% if task.status == "归档" %}
+  		  		{{task.function}}();
+			{% endif %}
+		{% endfor %}
+      } 
+
+</script>
