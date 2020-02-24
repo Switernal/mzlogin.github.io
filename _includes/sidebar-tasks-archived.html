@@ -52,13 +52,34 @@
                     		<time datetime="{{ task.date }}">{{ task.date | date: '%Y-%m-%d %H:%M'}}</time>
                 	</span>
 
+		<span class="meta-info" title="任务已截止">
+			<h3><p style="margin-block-start: 0px; margin-block-end: 0px" >任务已截止</p></h3>
+
 	            <span class="meta-info" title="截止日期：{{ task.date }}">
 <h3 style="margin-bottom: 0px"><p  class="{{task.class}}" style="margin-block-start: 0px; margin-block-end: 0px" ></p></h3>
   <script>
 		
       function {{task.function}}() {
+
 	document.getElementById("{{id}}").style.background = "#6c757d";
- 	document.querySelector(".{{task.class}}").innerHTML = "任务已截止！";
+
+	coutDown();
+
+	function countDown() {
+         
+              var deadLine = "{{task.date}}".substr(0,19);
+              var nowtime = new Date();
+              var endtime = new Date(deadLine.replace(/-/g, "/"));
+              var lefttime = parseInt((nowtime.getTime() - endtime.getTime()) / 1000);
+              var d = parseInt(lefttime / (24*60*60))
+              var h = parseInt(lefttime / (60 * 60) % 24);
+              var m = parseInt(lefttime / 60 % 60);
+              var s = parseInt(lefttime % 60);
+
+              document.querySelector(".{{task.class}}").innerHTML = `任务截止已经过去  ${d} 天 ${h} 小时 ${m} 分 ${s} 秒`;
+
+              setTimeout(countDown, 1000);
+            }
       }
     </script>    
 	            </span>
