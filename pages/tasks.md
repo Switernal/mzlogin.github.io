@@ -47,7 +47,7 @@ deadline: 2020-02-23 08:00:00
 </div>
 <script>
     function viewArchivedTasks() {
-        window.location.href=”https://switernal.cn/ArchivedTasks/”;
+        window.location.href="https://switernal.cn/ArchivedTasks/";
     }
 </script>
 
