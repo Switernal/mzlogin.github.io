@@ -42,6 +42,17 @@ deadline: 2020-02-23 08:00:00
 
 
 
+<div class="btn-inline">
+    <h1><button onclick="viewArchivedTasks()" class="btn btn-outline" type="button">查看已截止的任务</button></h1>
+</div>
+<script>
+    function viewArchivedTasks() {
+        window.location.href=”https://switernal.cn/ArchivedTasks/”;
+    }
+</script>
+
+
+
 <span id="busuanzi_container_page_pv">
 
 <h5 style="font-weight: normal; color: DimGray"><i>这个页面已经被偷看了 <span id="busuanzi_value_page_pv"></span> 次</i>
