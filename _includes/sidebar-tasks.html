@@ -5,7 +5,7 @@
 
 {% assign id = id | plus: 1 %}
 
-{% if task.title != "Course" %}
+{% if task.status != "归档" %}
 <a class="card text-center">
     <div class="thumbnail">
         <div class="card-image" id="{{id}}">
