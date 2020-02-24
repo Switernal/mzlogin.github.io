@@ -30,7 +30,7 @@ $(document).ready(
 	function() {
 	
 		var deadLine = "{{page.deadline}}".substr(0,19);
-		var date=new Date(deadLine);
+		var date=new Date(deadLine.replace(/-/g, "/"));
 		var unixTime = parseInt((date.valueOf() - $.now()) / 1000);
 
 		$('#countdown18').ClassyCountdown({
