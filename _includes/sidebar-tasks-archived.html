@@ -1,7 +1,7 @@
 <h1>过期作业</h1>
 {% assign id = 0 %}
 
-{% for task in site.tasks %}
+{% for task in site.tasks reversed %}
 
 {% assign id = id | plus: 1 %}
 
