@@ -114,7 +114,9 @@
 <script>    
       window.onload=function(){
   		{% for task in site.tasks %}
-  		  	{{task.function}}();
+			{% if task.status != "归档" %}
+  		  		{{task.function}}();
+			{% endif %}
 		{% endfor %}
       } 
 
