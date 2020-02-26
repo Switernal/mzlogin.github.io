@@ -13,7 +13,9 @@ permalink: /ArchivedTasks/
 
 ------
 
-这里显示了已经过期的任务，全部都已归档，Switernal不会再更新这些任务。
+这里显示了已经过期的任务。
+
+这些任务全部都已经归档，因此Switernal将不再对其进行更新。
 
 <div class="btn-inline">
     <h1><button onclick="viewArchivedTasks()" class="btn btn-outline" type="button">查看进行中的任务</button></h1>
