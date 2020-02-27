@@ -3,7 +3,7 @@ layout: task
 categories: Task
 
 title: Unit 6 A Simple Life
-description: 英语听力
+description: 六级79班听力作业
 start: 2020-05-06 00:00:00 +0800
 date: 2020-05-20 00:00:00 +0800
 class: englishUC0520
