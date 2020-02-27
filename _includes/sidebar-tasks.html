@@ -63,6 +63,7 @@
   <script>
 		
       function {{task.function}}() {
+
           countDown();
 
           function addZero(i) {
@@ -72,7 +73,15 @@
          
               var deadLine = "{{task.date}}".substr(0,19);
               var nowtime = new Date();
+              var starttime = new Date("{{task.start}}".substr(0,19).replace(/-/g, "/"));
               var endtime = new Date(deadLine.replace(/-/g, "/"));
+
+	if (starttime.getTime() > nowtime.getTime()) {
+	     document.getElementById("{{id}}").style.background = "White";
+                 document.querySelector(".{{task.class}}").innerHTML = "任务开始时间：" + {{task.start}}".substr(0,19);
+	     document.querySelector(".{{task.class}}").style.color = "Black";
+	      return ;
+	}
               var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
               var d = parseInt(lefttime / (24*60*60))
               var h = parseInt(lefttime / (60 * 60) % 24);
