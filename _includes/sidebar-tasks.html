@@ -79,8 +79,8 @@
 	if (starttime.getTime() > nowtime.getTime()) {
 	     document.getElementById("{{id}}").style.background = "White";
                  document.querySelector(".{{task.class}}").innerHTML = "任务开始时间：" + "{{task.start}}".substr(0,19);
-	     document.querySelector(".{{task.class}}").innerHTML.style.color = "Black";
-	      return ;
+	     document.querySelector(".{{task.class}}").style.color = "Black";
+	    
 	}
               var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
               var d = parseInt(lefttime / (24*60*60))
