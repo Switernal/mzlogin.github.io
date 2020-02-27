@@ -77,8 +77,8 @@
               var endtime = new Date(deadLine.replace(/-/g, "/"));
 
 	if (starttime.getTime() > nowtime.getTime()) {
-	     document.getElementById("{{id}}").style.background = "White";
-                 document.querySelector(".{{task.class}}").innerHTML = "任务开始时间：" + "{{task.start}}".substr(0,19);
+	     document.getElementById("{{id}}").style.background = "GhostWhite";
+                 document.querySelector(".{{task.class}}").innerHTML = "任务开始时间：" + "{{task.start}}".substr(0,16);
 	     document.getElementById("{{id}}").querySelector(".card-title").style.color = "Black";
 	    return ;
 	}
