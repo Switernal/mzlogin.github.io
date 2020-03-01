@@ -57,10 +57,6 @@ deadline: 2020-02-23 08:00:00
 
 
 
-<span id="busuanzi_container_page_pv">
-
-<h5 style="font-weight: normal; color: DimGray"><i>这个页面已经被偷看了 <span id="busuanzi_value_page_pv"></span> 次</i>
-
 
 
   <div class="comment">
